@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa,CAAC,WAAW,CAAC,IAAI,CAAC,cAAc,CAAC,UAAU,CAAC,IAAI,CAAC,qBAAqB,CAAC,KAAK,CAAC,IAAI,CAAC,aAAa,CAAC,GAAG,CAAC,UAAU,CAAC,4BAA2B,CAAC,yBAAwB,CAAC,qBAAqB,CAAC,MAAM,CAAC,KAAK,CAAC,UAAU,CAAC,KAAK",
+"sources": ["why-changs.scss"],
+"names": [],
+"file": "why-changs.css"
+}

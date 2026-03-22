@@ -1,0 +1,88 @@
+/**
+ * Setup - please don't touch these rules.
+ */
+.container {
+    padding: 1em;
+    background-color: lightblue;
+}
+
+article.col {
+    padding: 1em;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+
+/**
+ * 1. Floats
+ * 
+ * Add CSS to build a 3-column layout
+ * using floats. Don't forget to change 
+ * the way box-sizing is calculated.
+ *
+ * Make sure the container completely wraps
+ * around the columns.
+ */
+ 
+* {
+     box-sizing: border-box;
+ }
+
+.col {
+    width: 33.33%;
+    float: left;
+    display: table-cell;
+}
+.container {
+    display: table;
+}
+
+/**
+ * 2. Flexbox
+ * 
+ * Great. We've supported most browsers
+ * by using floats, but now we want to create
+ * a better looking layout for modern browsers
+ * by using flexbox. 
+ *
+ * Change the layout to flexbox, but only if the
+ * current browser supports it.
+ *
+ * Check devtools to make sure the display mode 
+ * has been set to flex.
+ */
+
+ @supports(display: flex) {
+     .container {
+         display: flex;
+     }
+     .col {
+         width:33.33%;
+     }
+ }
+
+/**
+ * 3. CSS Grid
+ * 
+ * Awesome. That was pretty easy. Now the columns all 
+ * have equal heights. Much better looking. 
+ *
+ * Let's change the layout mode to grid -- only if the browser 
+ * supports it. Your columns should be equal width, with 
+ * a 1em gap between.
+ *
+ * Hint: Don't forget to reset the floats and widths on your
+ * .col class
+ * 
+ */
+
+ @supports(display: grid) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+    }
+    .col {
+        width: 100%;
+    }
+}

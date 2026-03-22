@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  
+  <h1 class ="header-title">CSS GRID</h1>
+  <h2>Why learn CSS Grids</h2>
+  <ul class="list">
+    <li>EASIER TO CREATE TWO DIMENSIONAL LAYOUTS</li>
+    <li>SIMPLER MARKUP</li>
+    <li>FLEXIBLE</li>
+    <li>SKIP FRAMEWORKS</li>
+    <li>BROWSER SUPPORT</li>
+    <li><a href="#cont-properties">CONTAINER PROPERTIES</a></li>
+    <li><a href="#item-properties">ITEM PROPERTIES</a></li>
+    <li><a href="#image-grid"> IMAGE GRID (EXAMPLE)</a></li>
+  </ul>
+
+  <h1 class="title">FIRST GRID</h1>
+        <div class="wrapper">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
+
+  <h1 class="title" id="cont-properties">GRID PROPERTIES (CONTAINER)</h1>
+        <div class="properties">
+          <div class="prop">display</div>
+          <div class="cont">defines the element as a grid container</div>
+          <div class="code">.container {<br>
+                display: grid | inline-grid;<br>
+            }</div>
+          <div class="prop">gird-template-columns</div>
+          <div class="cont">property specifies the number (and the track size) of columns in a grid layout</div>
+          <div class="code">.container {<br>
+              display:grid;<br>
+              grid-template-columns: repeat(12,1fr);<br>
+          }</div>
+          <div class="prop">gird-template-rows</div>
+          <div class="cont">property specifies the number (and the track size) of rows in a grid layout</div>
+          <div class="code">.container {<br>
+            display:grid;<br>
+            grid-template-rows: 1fr 4fr;<br>
+        }</div>
+          <div class="prop">grid-template</div>
+          <div class="cont">shorthand property for <i>grid-template-columns</i> and <i>grid-template-rows</i></div>
+          <div class="code">.container {<br>
+              display: grid;<br>
+              grid-template: repeat(12,1fr) / auto auto auto;<br>
+            }</div>
+          <div class="prop">grid-template-areas</div>
+          <div class="cont">property specifies areas within the grid layout</div>
+          <div class="code">.item {<br>
+              grid-area: myArea;<br>
+            } <br>
+            .container {<br>
+              display: grid;<br>
+              grid-template-areas: "myArea myArea .";<br>
+            }</div>
+          <div class="prop">gird-auto-rows</div>
+          <div class="cont">property sets a size for the rows in a grid container</div>
+          <div class="code">.container {<br>
+              display: grid;<br>
+              grid-auto-rows: 100px;<br>
+            }</div>
+          <div class="prop">gird-auto-columns</div>
+          <div class="cont">property sets a size for the columns in a grid container</div>
+          <div class="code">.container {<br>
+            display: grid;<br>
+            grid-auto-columns: 1fr;<br>
+          }</div>
+          <div class="prop">gird-auto-flow</div>
+          <div class="cont">property controls how auto-placed items get inserted in the grid</div>
+          <div class="code">.container {<br>
+              display: grid;<br>
+              grid-auto-flow: row;<br>
+            }</div>
+          <div class="prop">gird-gap</div>
+          <div class="cont">property specifies the size of columns and row gutters</div>
+          <div class="code">.container {<br>
+          display:grid;<br>
+          gird-gap: 5px;<br>
+          }</div>
+        </div>
+  <h1 class="title" id="item-properties">GRID PROPERTIES (ITEMS)</h1>
+        <div class="properties">
+            <div class="prop">gird-column-start</div>
+            <div class="cont">Determines a grid item's location within the grid by referring to the column where it starts</div>  
+            <div class="code">.item {<br>
+                grid-column-start: 2;<br>
+              }</div>
+            <div class="prop">gird-column-end</div>
+            <div class="cont">Determines a grid item's location within the grid by referring to the column where it ends</div>  
+            <div class="code">.item {<br>
+              grid-column-end: 5;<br>
+            }</div>
+            <div class="prop">gird-row-start</div>
+            <div class="cont">Determines a grid item's location within the grid by referring to the row where it starts</div>  
+            <div class="code">.item {<br>
+              grid-row-start: 3;<br>
+            }</div>
+            <div class="prop">gird-row-end</div>
+            <div class="cont">Determines a grid item's location within the grid by referring to the row where it ends</div>  
+            <div class="code">.item {<br>
+              grid-row-start: 6;<br>
+            }</div>
+            <div class="prop">gird-row</div>
+            <div class="cont">shorthand property for <i>gird-row-start</i> and <i>grid-row-end</i></div>  
+            <div class="code">.item {<br>
+              grid-row: 3 / 6;<br>
+            }</div>
+            <div class="prop">gird-column</div>
+            <div class="cont">Determines a grid item's location within the grid by referring to the row where it ends</div>
+            <div class="code">.item {<br>
+              grid-column: 2 / 5;<br>
+            }</div>
+            <div class="prop">gird-area</div>
+            <div class="cont">Gives an item a name so that it can be referenced by a template created with the grid-template-areas property</div>    
+            <div class="code">.item {<br>
+                grid-area: 2 / 1 / span 2 / span 3;<br>
+              }</div>
+        </div>
+        <h1 class="title" id="image-grid">Image Grid</h1>
+      <div class="image-grid">
+        <img src="img/1.jpg" alt="img1">
+        <img src="img/2.jpg" alt="img2">
+        <img src="img/3.jpg" alt="img3">
+        <img src="img/4.jpg" alt="img4">
+        <img src="img/5.jpg" alt="img5">
+        <img src="img/6.jpg" alt="img6">
+        <img src="img/12.jpg" alt="img12">
+        <img src="img/8.jpg" alt="img8">
+        <img src="img/9.jpg" alt="img9">
+        <img src="img/10.jpg" alt="img10">
+        <img src="img/11.jpg" alt="img11">
+        <img src="img/7.png" alt="img7">
+      </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
